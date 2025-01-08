@@ -7,6 +7,20 @@ class Livre
     private int $nbPages;
     private bool $estEmprunte;
 
+    /**
+     * @param string $titre
+     * @param string $auteur
+     * @param int $nbPages
+     * @param bool $estEmprunte
+     */
+    public function __construct(string $titre, string $auteur, int $nbPages, bool $estEmprunte)
+    {
+        $this->titre = $titre;
+        $this->auteur = $auteur;
+        $this->nbPages = $nbPages;
+        $this->estEmprunte = $estEmprunte;
+    }
+
 
     public function getTitre(): string
     {
