@@ -5,14 +5,14 @@ class Emprunt
 
     private Livre $livre;
     private Utilisateur $utilisateur;
-    private string $date;
+    private int $date;
 
     /**
      * @param Livre $livre
      * @param Utilisateur $utilisateur
-     * @param string $date
+     * @param int $date
      */
-    public function __construct(Livre $livre, Utilisateur $utilisateur, string $date)
+    public function __construct(Livre $livre, Utilisateur $utilisateur, int $date)
     {
         $this->livre = $livre;
         $this->utilisateur = $utilisateur;
@@ -39,12 +39,12 @@ class Emprunt
         $this->utilisateur = $utilisateur;
     }
 
-    public function getDate(): string
+    public function getDate(): int
     {
         return $this->date;
     }
 
-    public function setDate(string $date): void
+    public function setDate(int $date): void
     {
         $this->date = $date;
     }
