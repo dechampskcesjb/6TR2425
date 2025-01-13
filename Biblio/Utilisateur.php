@@ -61,6 +61,7 @@ class Utilisateur
         if(!$livre->isEstEmprunte() ){
             $livre->emprunter();
             $this->emprunts[] = $livre;
+            $emprunt = new Emprunt($livre,$this,time());
         }
     }
 
