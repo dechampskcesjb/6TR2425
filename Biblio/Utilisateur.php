@@ -66,5 +66,12 @@ class Utilisateur
 
     public function retournerLivre(Livre $livre)
     {
+        foreach ($this->emprunts as $emprunt){
+            if ($emprunt === $livre){
+                $livre->setEstEmprunte(false);
+                unset($this->emprunts[$emprunt->getId()]);
+                return;
+            }
+        }
     }
 }
