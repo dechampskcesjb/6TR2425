@@ -79,5 +79,5 @@ class Utilisateur
         return $this->emprunts;
     }
 
-    
+
 }
