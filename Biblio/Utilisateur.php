@@ -74,4 +74,10 @@ class Utilisateur
             }
         }
     }
+
+    public function listerEmprunts(){
+        return $this->emprunts;
+    }
+
+    
 }
